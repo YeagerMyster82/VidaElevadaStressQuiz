@@ -183,7 +183,9 @@ function startQuiz(source) {
   quizExperience.hidden = false;
   currentQuestionIndex = 0;
   quizAnswers = [];
-  quizStatus.textContent = "Tu quiz está listo.";
+  if (quizStatus) {
+    quizStatus.textContent = "Tu quiz está listo.";
+  }
   renderProgress();
   renderQuestion();
   quizExperience.scrollIntoView({ behavior: "smooth", block: "start" });
