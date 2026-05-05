@@ -34,13 +34,29 @@
 
     <div class="page-shell">
       <header class="hero hero-optin">
+        <nav class="hero-nav">
+          <div class="brand-lockup">
+            <div class="brand-mark">V</div>
+            <div>
+              <strong>Vida Elevada</strong>
+              <span>Centro Quiropráctico</span>
+            </div>
+          </div>
+          <div class="hero-nav-links">
+            <span>Servicios</span>
+            <span>Nuestro Equipo</span>
+            <span>Contáctanos</span>
+          </div>
+        </nav>
+
         <section class="hero-copy reveal">
           <p class="eyebrow">Vida Elevada | La Neuropráctica™</p>
-          <h1>Haz el quiz y descubre qué necesita tu sistema nervioso hoy.</h1>
+          <h1>Hackea tu sistema nervioso. Descubre qué necesita hoy.</h1>
           <p class="hero-text">
-            Primero identificas si tu cuerpo está funcionando desde sobrecarga
-            simpática, freeze o una respuesta mixta. Después te mostramos tu
-            resultado y te damos acceso a una rutina guiada de 5 minutos.
+            Haz un quiz breve y descubre si tu cuerpo está funcionando desde
+            sobrecarga simpática, freeze o una respuesta mixta. Después te
+            mostramos tu resultado y te damos acceso a una rutina guiada de 5
+            minutos.
           </p>
           <p class="brand-mantra">
             En Vida Elevada nos especializamos en quiropráctica basada en
@@ -54,7 +70,7 @@
             <li>Rutina guiada de 5 min</li>
           </ul>
 
-          <a class="button button-primary hero-jump" href="#quiz-form">
+          <a class="button button-primary hero-jump" href="#quiz-launch" id="open-quiz-hero">
             Quiero hacer el quiz
           </a>
         </section>
@@ -91,9 +107,9 @@
               <article class="bundle-card">
                 <p class="card-label">Siguiente paso</p>
                 <ul class="mini-checklist">
+                  <li>Haz el quiz</li>
                   <li>Ve tu resultado</li>
-                  <li>Deja tus datos</li>
-                  <li>Recibe el curso</li>
+                  <li>Recibe tu rutina</li>
                 </ul>
               </article>
             </div>
@@ -112,88 +128,22 @@
             <h2>Haz el quiz primero</h2>
           </div>
 
-          <div class="form-card quiz-card-shell">
+          <div class="form-card quiz-card-shell" id="quiz-launch">
             <p class="card-label">Quiz del sistema nervioso</p>
-            <form id="quiz-form" class="optin-form" novalidate>
-              <label>
-                1. ¿Cómo empieza tu día normalmente?
-                <select name="q1" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Con la mente ya activa antes de levantarme, como si el cerebro no hubiera descansado</option>
-                  <option value="freeze">Con muchísimo esfuerzo. Me cuesta arrancar aunque haya dormido</option>
-                  <option value="mixta">Nunca sé cómo va a estar mi cuerpo hasta que me levanto</option>
-                </select>
-              </label>
-              <label>
-                2. Alguien te dice "relájate un momento." ¿Qué pasa?
-                <select name="q2" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Lo intento pero mi mente sigue corriendo, no puedo simplemente "apagar"</option>
-                  <option value="freeze">Me desconecto fácil... quizás demasiado fácil</option>
-                  <option value="mixta">Depende del día. A veces puedo, a veces es imposible</option>
-                </select>
-              </label>
-              <label>
-                3. ¿Cómo describirías tu energía la mayor parte del tiempo?
-                <select name="q3" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Alta pero tensa, como una cuerda que está demasiado estirada</option>
-                  <option value="freeze">Baja y pesada, como cargar con algo que no puedo soltar</option>
-                  <option value="mixta">Impredecible, sube y baja sin que yo entienda por qué</option>
-                </select>
-              </label>
-              <label>
-                4. ¿Y tu sueño?
-                <select name="q4" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Me cuesta apagar la mente para dormir, o me despierto en la madrugada con el cerebro activo</option>
-                  <option value="freeze">Podría dormir todo el día y aún así sentirme agotado/a</option>
-                  <option value="mixta">Algunos días duermo bien y otros es un desastre, sin patrón claro</option>
-                </select>
-              </label>
-              <label>
-                5. Cuando algo te estresa, ¿qué hace tu cuerpo?
-                <select name="q5" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Se tensa. Mandíbula apretada, hombros subidos, corazón acelerado</option>
-                  <option value="freeze">Se apaga. Me bloqueo, me quedo sin palabras, me desconecto</option>
-                  <option value="mixta">A veces explota y otras veces simplemente... no reacciona</option>
-                </select>
-              </label>
-              <label>
-                6. ¿Cómo es tu concentración?
-                <select name="q6" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Mi mente va tan rápido que salto de una cosa a otra sin terminar nada</option>
-                  <option value="freeze">Me siento lento/a, como si hubiera neblina entre mis pensamientos y las acciones</option>
-                  <option value="mixta">Inconsistente. Hay días que fluyo y días que no puedo ni empezar</option>
-                </select>
-              </label>
-              <label>
-                7. Al final del día...
-                <select name="q7" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">Estoy agotado/a pero no puedo desconectarme. Mi cuerpo quiere parar pero mi mente no</option>
-                  <option value="freeze">Solo quiero desaparecer. No tengo energía ni para una conversación</option>
-                  <option value="mixta">Nunca sé cómo voy a terminar. Es un misterio hasta que llega la noche</option>
-                </select>
-              </label>
-              <label>
-                8. Si tu cuerpo pudiera hablar en este momento, ¿qué diría?
-                <select name="q8" required>
-                  <option value="">Selecciona una opción</option>
-                  <option value="simpatica">No puedo parar aunque quiera</option>
-                  <option value="freeze">Ya no tengo nada que dar</option>
-                  <option value="mixta">No sé ni cómo estoy</option>
-                </select>
-              </label>
-
-              <button class="button button-primary button-full" type="submit">
-                Ver mi resultado
+            <div class="quiz-launch-card">
+              <div>
+                <h3>Te tomará 2 minutos</h3>
+                <p>
+                  Responde 8 preguntas y descubre si tu sistema está en
+                  simpático, freeze o una respuesta mixta.
+                </p>
+              </div>
+              <button class="button button-primary" type="button" id="open-quiz-section">
+                Empezar quiz
               </button>
-              <p class="privacy-note">Tu resultado aparece al instante en esta misma página.</p>
-              <p class="form-status" id="quiz-status" aria-live="polite"></p>
-            </form>
+            </div>
+            <p class="privacy-note">Tu resultado aparece al instante al terminar.</p>
+            <p class="form-status" id="quiz-status" aria-live="polite"></p>
           </div>
         </section>
 
@@ -297,7 +247,21 @@
     </div>
 
     <div class="sticky-mobile-cta">
-      <a class="button button-primary button-full" href="#quiz-form">Obtener rutina (gratis)</a>
+      <button class="button button-primary button-full" type="button" id="open-quiz-sticky">Obtener rutina (gratis)</button>
+    </div>
+
+    <div class="quiz-modal" id="quiz-modal" hidden>
+      <div class="quiz-modal-card">
+        <button class="quiz-close" type="button" id="close-quiz" aria-label="Cerrar quiz">×</button>
+        <p class="card-label">Quiz del sistema nervioso</p>
+        <div class="quiz-progress" id="quiz-progress" aria-hidden="true"></div>
+        <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 8</p>
+        <h3 class="quiz-question" id="quiz-question"></h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-nav">
+          <button class="button button-secondary" type="button" id="quiz-back">Atrás</button>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
