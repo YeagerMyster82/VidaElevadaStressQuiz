@@ -70,7 +70,7 @@
             <li>Rutina guiada de 5 min</li>
           </ul>
 
-          <a class="button button-primary hero-jump" href="#quiz-launch" id="open-quiz-hero">
+          <a class="button button-primary hero-jump" href="#quiz-experience" id="open-quiz-hero">
             Quiero hacer el quiz
           </a>
         </section>
@@ -144,6 +144,27 @@
             </div>
             <p class="privacy-note">Tu resultado aparece al instante al terminar.</p>
             <p class="form-status" id="quiz-status" aria-live="polite"></p>
+          </div>
+
+          <div class="quiz-embed reveal" id="quiz-experience">
+            <div class="quiz-embed-header">
+              <div>
+                <p class="card-label">Quiz del sistema nervioso</p>
+                <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 8</p>
+              </div>
+              <div class="quiz-progress" id="quiz-progress" aria-hidden="true"></div>
+            </div>
+
+            <div class="quiz-stage">
+              <div class="quiz-stage-inner" id="quiz-stage-inner">
+                <h3 class="quiz-question" id="quiz-question"></h3>
+                <div class="quiz-options" id="quiz-options"></div>
+              </div>
+            </div>
+
+            <div class="quiz-nav">
+              <button class="button button-secondary" type="button" id="quiz-back">Atrás</button>
+            </div>
           </div>
         </section>
 
@@ -248,20 +269,6 @@
 
     <div class="sticky-mobile-cta">
       <button class="button button-primary button-full" type="button" id="open-quiz-sticky">Obtener rutina (gratis)</button>
-    </div>
-
-    <div class="quiz-modal" id="quiz-modal" hidden>
-      <div class="quiz-modal-card">
-        <button class="quiz-close" type="button" id="close-quiz" aria-label="Cerrar quiz">×</button>
-        <p class="card-label">Quiz del sistema nervioso</p>
-        <div class="quiz-progress" id="quiz-progress" aria-hidden="true"></div>
-        <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 8</p>
-        <h3 class="quiz-question" id="quiz-question"></h3>
-        <div class="quiz-options" id="quiz-options"></div>
-        <div class="quiz-nav">
-          <button class="button button-secondary" type="button" id="quiz-back">Atrás</button>
-        </div>
-      </div>
     </div>
 
     <script src="script.js"></script>

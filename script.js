@@ -14,18 +14,18 @@ const formStatus = document.getElementById("form-status");
 const submitButton = document.getElementById("submit-button");
 const revealItems = document.querySelectorAll(".reveal");
 const trackedEvents = new Set();
-const quizModal = document.getElementById("quiz-modal");
 const quizQuestion = document.getElementById("quiz-question");
 const quizOptions = document.getElementById("quiz-options");
 const quizCounter = document.getElementById("quiz-counter");
 const quizProgress = document.getElementById("quiz-progress");
 const quizBack = document.getElementById("quiz-back");
+const quizStageInner = document.getElementById("quiz-stage-inner");
+const quizExperience = document.getElementById("quiz-experience");
 const openQuizButtons = [
   document.getElementById("open-quiz-hero"),
   document.getElementById("open-quiz-section"),
   document.getElementById("open-quiz-sticky"),
 ].filter(Boolean);
-const closeQuizButton = document.getElementById("close-quiz");
 
 const quizQuestions = [
   {
@@ -246,15 +246,13 @@ function renderQuestion() {
 
       if (currentQuestionIndex === quizQuestions.length - 1) {
         const resultType = scoreQuiz(quizAnswers);
-        closeQuizModal();
         trackEvent("Quiz Completed", { result: resultType });
         renderQuizResult(resultType);
         return;
       }
 
       currentQuestionIndex += 1;
-      renderProgress();
-      renderQuestion();
+      transitionToQuestion();
     });
     quizOptions.appendChild(button);
   });
@@ -262,19 +260,24 @@ function renderQuestion() {
   quizBack.style.visibility = currentQuestionIndex === 0 ? "hidden" : "visible";
 }
 
-function openQuizModal() {
-  currentQuestionIndex = 0;
-  quizAnswers = [];
-  quizModal.hidden = false;
-  document.body.style.overflow = "hidden";
-  renderProgress();
-  renderQuestion();
-  trackEvent("Quiz Started", { source: "popup" });
+function transitionToQuestion() {
+  quizStageInner.classList.add("is-sliding");
+  window.setTimeout(() => {
+    renderProgress();
+    renderQuestion();
+    quizStageInner.classList.remove("is-sliding");
+  }, 180);
 }
 
-function closeQuizModal() {
-  quizModal.hidden = true;
-  document.body.style.overflow = "";
+function startQuiz() {
+  if (quizAnswers.length === 0) {
+    currentQuestionIndex = 0;
+    quizAnswers = [];
+  }
+  renderProgress();
+  renderQuestion();
+  quizExperience.scrollIntoView({ behavior: "smooth", block: "start" });
+  trackEvent("Quiz Started", { source: "embedded" });
 }
 
 function renderQuizResult(type) {
@@ -330,23 +333,14 @@ openQuizButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     quizStatus.textContent = "";
-    openQuizModal();
+    startQuiz();
   });
 });
-
-closeQuizButton?.addEventListener("click", closeQuizModal);
 
 quizBack?.addEventListener("click", () => {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex -= 1;
-    renderProgress();
-    renderQuestion();
-  }
-});
-
-quizModal?.addEventListener("click", (event) => {
-  if (event.target === quizModal) {
-    closeQuizModal();
+    transitionToQuestion();
   }
 });
 
@@ -385,4 +379,6 @@ leadForm?.addEventListener("submit", async (event) => {
 
 setupReveal();
 setupCTAEvents();
+renderProgress();
+renderQuestion();
 trackOnce("Optin Page Viewed", { page: "quiz-first-optin" });
