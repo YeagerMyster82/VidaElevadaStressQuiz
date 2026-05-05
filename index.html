@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vida Elevada | Quiz + rutina de 5 minutos</title>
+    <meta
+      name="description"
+      content="Haz el quiz de 8 preguntas, descubre tu estado actual y recibe una rutina guiada de 5 minutos para tu sistema nervioso."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-banner" role="status">
+      <p>
+        LIMITED TIME OFFER: Quiz de 8 preguntas + rutina guiada de 5 minutos para
+        calmar tu sistema nervioso (según tu resultado).
+      </p>
+    </div>
+
+    <div class="page-shell">
+      <header class="hero hero-optin">
+        <section class="hero-copy reveal">
+          <p class="eyebrow">Vida Elevada | La Neuropráctica™</p>
+          <h1>Haz el quiz y descubre qué necesita tu sistema nervioso hoy.</h1>
+          <p class="hero-text">
+            Primero identificas si tu cuerpo está funcionando desde sobrecarga
+            simpática, freeze o una respuesta mixta. Después te mostramos tu
+            resultado y te damos acceso a una rutina guiada de 5 minutos.
+          </p>
+          <p class="brand-mantra">
+            En Vida Elevada nos especializamos en quiropráctica basada en
+            neurología para ayudar a que tu sistema nervioso recupere orden,
+            claridad y capacidad de regulación.
+          </p>
+
+          <ul class="micro-benefits" aria-label="Beneficios principales">
+            <li>Quiz de 8 preguntas (2 min)</li>
+            <li>Resultado inmediato</li>
+            <li>Rutina guiada de 5 min</li>
+          </ul>
+
+          <a class="button button-primary hero-jump" href="#quiz-form">
+            Quiero hacer el quiz
+          </a>
+        </section>
+
+        <section class="hero-visual reveal" aria-label="Vista previa del recurso">
+          <div class="visual-scene">
+            <div class="leaf leaf-one"></div>
+            <div class="leaf leaf-two"></div>
+
+            <div class="bundle-card bundle-card-large">
+              <p class="card-label">Experiencia Neuropráctica™</p>
+              <h2>Quiz: ¿En qué estado está tu sistema nervioso?</h2>
+              <p>8 preguntas claras para entender tu patrón actual.</p>
+            </div>
+
+            <div class="bundle-grid">
+              <article class="bundle-card">
+                <p class="card-label">Resultado</p>
+                <div class="chip-row">
+                  <span class="chip">Simpático</span>
+                  <span class="chip">Freeze</span>
+                  <span class="chip">Mixto</span>
+                </div>
+              </article>
+
+              <article class="bundle-card">
+                <p class="card-label">Rutina guiada 5:00</p>
+                <div class="player-ui">
+                  <span class="player-button"></span>
+                  <span class="player-track"></span>
+                </div>
+              </article>
+
+              <article class="bundle-card">
+                <p class="card-label">Siguiente paso</p>
+                <ul class="mini-checklist">
+                  <li>Ve tu resultado</li>
+                  <li>Deja tus datos</li>
+                  <li>Recibe el curso</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="seal">
+              Diseñado por Vida Elevada Quiropráctica con enfoque neurológico
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Paso 1</p>
+            <h2>Haz el quiz primero</h2>
+          </div>
+
+          <div class="form-card quiz-card-shell">
+            <p class="card-label">Quiz del sistema nervioso</p>
+            <form id="quiz-form" class="optin-form" novalidate>
+              <label>
+                1. ¿Cómo empieza tu día normalmente?
+                <select name="q1" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Con la mente ya activa antes de levantarme, como si el cerebro no hubiera descansado</option>
+                  <option value="freeze">Con muchísimo esfuerzo. Me cuesta arrancar aunque haya dormido</option>
+                  <option value="mixta">Nunca sé cómo va a estar mi cuerpo hasta que me levanto</option>
+                </select>
+              </label>
+              <label>
+                2. Alguien te dice "relájate un momento." ¿Qué pasa?
+                <select name="q2" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Lo intento pero mi mente sigue corriendo, no puedo simplemente "apagar"</option>
+                  <option value="freeze">Me desconecto fácil... quizás demasiado fácil</option>
+                  <option value="mixta">Depende del día. A veces puedo, a veces es imposible</option>
+                </select>
+              </label>
+              <label>
+                3. ¿Cómo describirías tu energía la mayor parte del tiempo?
+                <select name="q3" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Alta pero tensa, como una cuerda que está demasiado estirada</option>
+                  <option value="freeze">Baja y pesada, como cargar con algo que no puedo soltar</option>
+                  <option value="mixta">Impredecible, sube y baja sin que yo entienda por qué</option>
+                </select>
+              </label>
+              <label>
+                4. ¿Y tu sueño?
+                <select name="q4" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Me cuesta apagar la mente para dormir, o me despierto en la madrugada con el cerebro activo</option>
+                  <option value="freeze">Podría dormir todo el día y aún así sentirme agotado/a</option>
+                  <option value="mixta">Algunos días duermo bien y otros es un desastre, sin patrón claro</option>
+                </select>
+              </label>
+              <label>
+                5. Cuando algo te estresa, ¿qué hace tu cuerpo?
+                <select name="q5" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Se tensa. Mandíbula apretada, hombros subidos, corazón acelerado</option>
+                  <option value="freeze">Se apaga. Me bloqueo, me quedo sin palabras, me desconecto</option>
+                  <option value="mixta">A veces explota y otras veces simplemente... no reacciona</option>
+                </select>
+              </label>
+              <label>
+                6. ¿Cómo es tu concentración?
+                <select name="q6" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Mi mente va tan rápido que salto de una cosa a otra sin terminar nada</option>
+                  <option value="freeze">Me siento lento/a, como si hubiera neblina entre mis pensamientos y las acciones</option>
+                  <option value="mixta">Inconsistente. Hay días que fluyo y días que no puedo ni empezar</option>
+                </select>
+              </label>
+              <label>
+                7. Al final del día...
+                <select name="q7" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">Estoy agotado/a pero no puedo desconectarme. Mi cuerpo quiere parar pero mi mente no</option>
+                  <option value="freeze">Solo quiero desaparecer. No tengo energía ni para una conversación</option>
+                  <option value="mixta">Nunca sé cómo voy a terminar. Es un misterio hasta que llega la noche</option>
+                </select>
+              </label>
+              <label>
+                8. Si tu cuerpo pudiera hablar en este momento, ¿qué diría?
+                <select name="q8" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="simpatica">No puedo parar aunque quiera</option>
+                  <option value="freeze">Ya no tengo nada que dar</option>
+                  <option value="mixta">No sé ni cómo estoy</option>
+                </select>
+              </label>
+
+              <button class="button button-primary button-full" type="submit">
+                Ver mi resultado
+              </button>
+              <p class="privacy-note">Tu resultado aparece al instante en esta misma página.</p>
+              <p class="form-status" id="quiz-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section reveal" id="result-section" hidden>
+          <div class="section-heading">
+            <p class="eyebrow">Paso 2</p>
+            <h2 id="result-heading">Tu resultado</h2>
+          </div>
+
+          <div class="problem-panel result-panel-copy">
+            <p class="result-label" id="result-label"></p>
+            <p id="result-summary"></p>
+            <p id="result-body-1"></p>
+            <p id="result-body-2"></p>
+            <p id="result-body-3"></p>
+          </div>
+        </section>
+
+        <section class="section section-cta-final reveal" id="course-section" hidden>
+          <div class="cta-final-panel">
+            <div class="cta-copy">
+              <p class="eyebrow">Paso 3</p>
+              <h2>Tenemos un curso gratuito de 5 minutos para ti.</h2>
+              <p>
+                Déjanos tu nombre, teléfono y email para enviarte acceso a tu
+                rutina y acompañarte con el siguiente paso según tu resultado.
+              </p>
+              <p class="hero-note">
+                Lo recibirás por email y podrás volver a usarlo cuando lo necesites.
+              </p>
+            </div>
+
+            <form id="lead-form" class="application-form optin-form" action="/api/lead" method="post" novalidate>
+              <input type="hidden" name="quiz_optin" value="true" />
+              <input type="hidden" name="quiz_result" id="quiz-result-field" value="" />
+
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" autocomplete="given-name" required />
+              <p class="field-error" id="name-error" aria-live="polite"></p>
+
+              <label for="phone">Teléfono</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+              <p class="field-error" id="phone-error" aria-live="polite"></p>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+
+              <button class="button button-primary button-full" type="submit" id="submit-button">
+                Enviar mi rutina de 5 minutos
+              </button>
+              <p class="privacy-note">Respetamos tu privacidad. Puedes darte de baja cuando quieras.</p>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Neuropráctica™</p>
+            <h2>Por qué esto funciona (y por qué es diferente)</h2>
+          </div>
+          <div class="steps">
+            <article class="step-card">
+              <span>01</span>
+              <h3>Primero identificas tu patrón actual</h3>
+              <p>Empiezas con un quiz breve que te orienta según tu fisiología del momento.</p>
+            </article>
+            <article class="step-card">
+              <span>02</span>
+              <h3>Luego aplicas la rutina correcta</h3>
+              <p>La práctica coincide con tu estado, no con fuerza de voluntad ni consejos genéricos.</p>
+            </article>
+            <article class="step-card">
+              <span>03</span>
+              <h3>Le das al cuerpo una señal clara</h3>
+              <p>En 5 minutos, le das al cuerpo una señal simple de seguridad y organización.</p>
+            </article>
+          </div>
+          <p class="authority-note">
+            En Vida Elevada trabajamos con quiropráctica basada en neurología.
+            Nuestro enfoque busca ayudar a que el sistema nervioso salga del modo
+            supervivencia y se reorganice de forma más estable, no solo con alivio
+            temporal.
+          </p>
+          <div class="signature-strip">
+            <span>Sistema nervioso</span>
+            <span>Insight + regulación</span>
+            <span>Quiropráctica neurológica</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© Vida Elevada Quiropráctica</p>
+        <div class="footer-links">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="sticky-mobile-cta">
+      <a class="button button-primary button-full" href="#quiz-form">Obtener rutina (gratis)</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
