@@ -121,36 +121,18 @@ body::before {
 .brand-lockup {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.brand-lockup strong,
-.brand-lockup span,
-.hero-nav-links span {
-  display: block;
-}
-
-.brand-lockup strong {
-  font-size: 1.1rem;
-}
-
-.brand-lockup span,
 .hero-nav-links span {
   font-size: 0.83rem;
   opacity: 0.92;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  font-weight: 700;
+.brand-logo {
+  display: block;
+  width: 176px;
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-nav-links {
@@ -1025,6 +1007,10 @@ select {
   .hero-nav-links {
     gap: 14px;
     flex-wrap: wrap;
+  }
+
+  .brand-logo {
+    width: 150px;
   }
 
   .quiz-progress {

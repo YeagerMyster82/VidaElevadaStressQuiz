@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vida Elevada | Quiz + rutina de 5 minutos</title>
+    <title>Vida Elevada | Quiz del sistema nervioso</title>
     <meta
       name="description"
-      content="Haz el quiz de 8 preguntas, descubre tu estado actual y recibe una rutina guiada de 5 minutos para tu sistema nervioso."
+      content="Haz el quiz de 2 minutos y descubre en qué estado está tu sistema nervioso hoy, y qué necesita para recuperar el equilibrio."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +22,7 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="icon" type="image/png" href="assets/favicon-gold.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -36,11 +37,11 @@
       <header class="hero hero-optin">
         <nav class="hero-nav">
           <div class="brand-lockup">
-            <div class="brand-mark">V</div>
-            <div>
-              <strong>Vida Elevada</strong>
-              <span>Centro Quiropráctico</span>
-            </div>
+            <img
+              class="brand-logo"
+              src="assets/logo-white-complete.png"
+              alt="Vida Elevada Centro Quiropráctico"
+            />
           </div>
           <div class="hero-nav-links">
             <span>Servicios</span>
@@ -51,27 +52,24 @@
 
         <section class="hero-copy reveal">
           <p class="eyebrow">Vida Elevada | La Neuropráctica™</p>
-          <h1>Hackea tu sistema nervioso. Descubre qué necesita hoy.</h1>
+          <h1>Tu cuerpo está tratando de decirte algo. Ya es hora de escucharlo.</h1>
           <p class="hero-text">
-            Haz un quiz breve y descubre si tu cuerpo está funcionando desde
-            sobrecarga simpática, freeze o una respuesta mixta. Después te
-            mostramos tu resultado y te damos acceso a una rutina guiada de 5
-            minutos.
+            Haz el quiz de 2 minutos y descubre exactamente en qué estado está tu
+            sistema nervioso hoy, y qué necesita para recuperar el equilibrio.
           </p>
           <p class="brand-mantra">
-            En Vida Elevada nos especializamos en quiropráctica basada en
-            neurología para ayudar a que tu sistema nervioso recupere orden,
-            claridad y capacidad de regulación.
+            No es estrés. No es que seas dramático. Tu sistema nervioso lleva
+            tiempo mandándote señales que nadie te ha sabido explicar. Esto cambia hoy.
           </p>
 
           <ul class="micro-benefits" aria-label="Beneficios principales">
             <li>Quiz de 8 preguntas (2 min)</li>
-            <li>Resultado inmediato</li>
-            <li>Rutina guiada de 5 min</li>
+            <li>Resultado claro y fácil de entender</li>
+            <li>Siguiente paso personalizado</li>
           </ul>
 
           <a class="button button-primary hero-jump" href="#quiz-experience" id="open-quiz-hero">
-            Quiero hacer el quiz
+            Descubrir mi estado (gratis)
           </a>
         </section>
 
@@ -90,9 +88,9 @@
               <article class="bundle-card">
                 <p class="card-label">Resultado</p>
                 <div class="chip-row">
-                  <span class="chip">Simpático</span>
-                  <span class="chip">Freeze</span>
-                  <span class="chip">Mixto</span>
+                  <span class="chip">Acelerado</span>
+                  <span class="chip">Desconectado</span>
+                  <span class="chip">Inestable</span>
                 </div>
               </article>
 
@@ -114,9 +112,7 @@
               </article>
             </div>
 
-            <div class="seal">
-              Diseñado por Vida Elevada Quiropráctica con enfoque neurológico
-            </div>
+            <div class="seal">Diseñado por Vida Elevada Quiropráctica con enfoque neurológico</div>
           </div>
         </section>
       </header>
@@ -124,8 +120,49 @@
       <main>
         <section class="section reveal">
           <div class="section-heading">
+            <p class="eyebrow">Neuropráctica™</p>
+            <h2>Por qué esto funciona</h2>
+          </div>
+          <div class="steps">
+            <article class="step-card">
+              <span>01</span>
+              <h3>Primero identificas tu patrón actual</h3>
+              <p>8 preguntas. 2 minutos. Por fin un nombre para lo que llevas meses sintiendo.</p>
+            </article>
+            <article class="step-card">
+              <span>02</span>
+              <h3>Luego recibes la rutina exacta para tu estado</h3>
+              <p>
+                No consejos genéricos. Una práctica de 5 minutos diseñada
+                específicamente para el estado en que está tu sistema nervioso ahora
+                mismo, porque la rutina equivocada no solo no ayuda, puede empeorar las cosas.
+              </p>
+            </article>
+            <article class="step-card">
+              <span>03</span>
+              <h3>Le das a tu cuerpo una señal clara de que está a salvo</h3>
+              <p>
+                En 5 minutos, interrumpes el ciclo. No lo resuelves todo, pero le
+                dices a tu sistema nervioso que puede empezar a soltar.
+              </p>
+            </article>
+          </div>
+          <p class="authority-note">
+            En Vida Elevada trabajamos con quiropráctica basada en neurología.
+            Nuestro enfoque busca ayudar a que el sistema nervioso salga del modo
+            supervivencia y se reorganice de forma más estable, no solo con alivio temporal.
+          </p>
+          <div class="signature-strip">
+            <span>Sistema nervioso</span>
+            <span>Insight + regulación</span>
+            <span>Quiropráctica neurológica</span>
+          </div>
+        </section>
+
+        <section class="section reveal">
+          <div class="section-heading">
             <p class="eyebrow">Paso 1</p>
-            <h2>Haz el quiz primero</h2>
+            <h2>Empieza el quiz cuando estés listo/a</h2>
           </div>
 
           <div class="form-card quiz-card-shell" id="quiz-launch">
@@ -134,19 +171,19 @@
               <div>
                 <h3>Te tomará 2 minutos</h3>
                 <p>
-                  Responde 8 preguntas y descubre si tu sistema está en
-                  simpático, freeze o una respuesta mixta.
+                  Responde 8 preguntas y descubre qué patrón está dominando tu
+                  sistema nervioso hoy. Tu resultado aparece apenas terminas.
                 </p>
               </div>
               <button class="button button-primary" type="button" id="open-quiz-section">
-                Empezar quiz
+                Empezar el quiz
               </button>
             </div>
-            <p class="privacy-note">Tu resultado aparece al instante al terminar.</p>
+            <p class="privacy-note">Tu resultado se abrirá en una página separada para que puedas enfocarte en entenderlo.</p>
             <p class="form-status" id="quiz-status" aria-live="polite"></p>
           </div>
 
-          <div class="quiz-embed reveal" id="quiz-experience">
+          <div class="quiz-embed reveal" id="quiz-experience" hidden>
             <div class="quiz-embed-header">
               <div>
                 <p class="card-label">Quiz del sistema nervioso</p>
@@ -167,95 +204,6 @@
             </div>
           </div>
         </section>
-
-        <section class="section reveal" id="result-section" hidden>
-          <div class="section-heading">
-            <p class="eyebrow">Paso 2</p>
-            <h2 id="result-heading">Tu resultado</h2>
-          </div>
-
-          <div class="problem-panel result-panel-copy">
-            <p class="result-label" id="result-label"></p>
-            <p id="result-summary"></p>
-            <p id="result-body-1"></p>
-            <p id="result-body-2"></p>
-            <p id="result-body-3"></p>
-          </div>
-        </section>
-
-        <section class="section section-cta-final reveal" id="course-section" hidden>
-          <div class="cta-final-panel">
-            <div class="cta-copy">
-              <p class="eyebrow">Paso 3</p>
-              <h2>Tenemos un curso gratuito de 5 minutos para ti.</h2>
-              <p>
-                Déjanos tu nombre, teléfono y email para enviarte acceso a tu
-                rutina y acompañarte con el siguiente paso según tu resultado.
-              </p>
-              <p class="hero-note">
-                Lo recibirás por email y podrás volver a usarlo cuando lo necesites.
-              </p>
-            </div>
-
-            <form id="lead-form" class="application-form optin-form" action="/api/lead" method="post" novalidate>
-              <input type="hidden" name="quiz_optin" value="true" />
-              <input type="hidden" name="quiz_result" id="quiz-result-field" value="" />
-
-              <label for="name">Nombre</label>
-              <input id="name" name="name" type="text" autocomplete="given-name" required />
-              <p class="field-error" id="name-error" aria-live="polite"></p>
-
-              <label for="phone">Teléfono</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
-              <p class="field-error" id="phone-error" aria-live="polite"></p>
-
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-              <p class="field-error" id="email-error" aria-live="polite"></p>
-
-              <button class="button button-primary button-full" type="submit" id="submit-button">
-                Enviar mi rutina de 5 minutos
-              </button>
-              <p class="privacy-note">Respetamos tu privacidad. Puedes darte de baja cuando quieras.</p>
-              <p class="form-status" id="form-status" aria-live="polite"></p>
-            </form>
-          </div>
-        </section>
-
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Neuropráctica™</p>
-            <h2>Por qué esto funciona (y por qué es diferente)</h2>
-          </div>
-          <div class="steps">
-            <article class="step-card">
-              <span>01</span>
-              <h3>Primero identificas tu patrón actual</h3>
-              <p>Empiezas con un quiz breve que te orienta según tu fisiología del momento.</p>
-            </article>
-            <article class="step-card">
-              <span>02</span>
-              <h3>Luego aplicas la rutina correcta</h3>
-              <p>La práctica coincide con tu estado, no con fuerza de voluntad ni consejos genéricos.</p>
-            </article>
-            <article class="step-card">
-              <span>03</span>
-              <h3>Le das al cuerpo una señal clara</h3>
-              <p>En 5 minutos, le das al cuerpo una señal simple de seguridad y organización.</p>
-            </article>
-          </div>
-          <p class="authority-note">
-            En Vida Elevada trabajamos con quiropráctica basada en neurología.
-            Nuestro enfoque busca ayudar a que el sistema nervioso salga del modo
-            supervivencia y se reorganice de forma más estable, no solo con alivio
-            temporal.
-          </p>
-          <div class="signature-strip">
-            <span>Sistema nervioso</span>
-            <span>Insight + regulación</span>
-            <span>Quiropráctica neurológica</span>
-          </div>
-        </section>
       </main>
 
       <footer class="site-footer">
@@ -268,7 +216,7 @@
     </div>
 
     <div class="sticky-mobile-cta">
-      <button class="button button-primary button-full" type="button" id="open-quiz-sticky">Obtener rutina (gratis)</button>
+      <button class="button button-primary button-full" type="button" id="open-quiz-sticky">Empezar el quiz</button>
     </div>
 
     <script src="script.js"></script>
