@@ -1,4 +1,3 @@
-const quizStatus = document.getElementById("quiz-status");
 const revealItems = document.querySelectorAll(".reveal");
 const trackedEvents = new Set();
 const quizQuestion = document.getElementById("quiz-question");
@@ -10,73 +9,48 @@ const quizStageInner = document.getElementById("quiz-stage-inner");
 const quizExperience = document.getElementById("quiz-experience");
 const openQuizButtons = [
   document.getElementById("open-quiz-hero"),
-  document.getElementById("open-quiz-section"),
-  document.getElementById("open-quiz-sticky"),
+  document.getElementById("open-quiz-inline"),
 ].filter(Boolean);
 
 const quizQuestions = [
   {
-    question: "¿Cómo empieza tu día normalmente?",
+    question: "Cuando tienes un momento libre e inesperado, ¿qué hace tu mente?",
     options: [
-      { value: "simpatica", text: "Con la mente ya activa antes de levantarme, como si el cerebro no hubiera descansado" },
-      { value: "freeze", text: "Con muchísimo esfuerzo. Me cuesta arrancar aunque haya dormido" },
-      { value: "mixta", text: "Nunca sé cómo va a estar mi cuerpo hasta que me levanto" },
+      { letter: "A", value: "acelerado", text: "Se llena de cosas pendientes, empieza a planear, no puede simplemente estar quieta" },
+      { letter: "B", value: "desconectado", text: "Se queda en blanco, no tienes ganas de nada en particular, prefieres no pensar" },
+      { letter: "C", value: "inestable", text: "Va de un lado al otro, a veces con ideas y energía, a veces completamente vacía" },
     ],
   },
   {
-    question: "Alguien te dice \"relájate un momento.\" ¿Qué pasa?",
+    question: "¿Cómo describirías tu energía a lo largo del día?",
     options: [
-      { value: "simpatica", text: "Lo intento pero mi mente sigue corriendo, no puedo simplemente \"apagar\"" },
-      { value: "freeze", text: "Me desconecto fácil... quizás demasiado fácil" },
-      { value: "mixta", text: "Depende del día. A veces puedo, a veces es imposible" },
+      { letter: "A", value: "acelerado", text: "Tensa y acelerada, como si siempre hubiera algo urgente aunque no lo haya" },
+      { letter: "B", value: "desconectado", text: "Baja y pesada, cuesta arrancar y mantener el ritmo durante el día" },
+      { letter: "C", value: "inestable", text: "Impredecible, hay momentos buenos pero no sabes cuánto van a durar" },
     ],
   },
   {
-    question: "¿Cómo describirías tu energía la mayor parte del tiempo?",
+    question: "¿Cómo reacciona tu cuerpo cuando algo te estresa?",
     options: [
-      { value: "simpatica", text: "Alta pero tensa, como una cuerda que está demasiado estirada" },
-      { value: "freeze", text: "Baja y pesada, como cargar con algo que no puedo soltar" },
-      { value: "mixta", text: "Impredecible, sube y baja sin que yo entienda por qué" },
+      { letter: "A", value: "acelerado", text: "Se tensa, el corazón se acelera, sientes que tienes que hacer algo de inmediato" },
+      { letter: "B", value: "desconectado", text: "Se apaga, te desconectas, prefieres no lidiar con eso ahora" },
+      { letter: "C", value: "inestable", text: "Depende del día, a veces reaccionas con mucha intensidad y otras veces no tienes ni energía para reaccionar" },
     ],
   },
   {
-    question: "¿Y tu sueño?",
+    question: "¿Cómo es tu sueño últimamente?",
     options: [
-      { value: "simpatica", text: "Me cuesta apagar la mente para dormir, o me despierto en la madrugada con el cerebro activo" },
-      { value: "freeze", text: "Podría dormir todo el día y aún así sentirme agotado/a" },
-      { value: "mixta", text: "Algunos días duermo bien y otros es un desastre, sin patrón claro" },
+      { letter: "A", value: "acelerado", text: "Te cuesta apagar la mente para dormir, te despiertas en la noche o amaneces ya cansado" },
+      { letter: "B", value: "desconectado", text: "Duermes mucho pero el descanso nunca es suficiente, sigues agotado aunque hayas dormido" },
+      { letter: "C", value: "inestable", text: "Irregular, hay noches buenas y noches malas sin un patrón claro" },
     ],
   },
   {
-    question: "Cuando algo te estresa, ¿qué hace tu cuerpo?",
+    question: "Si tu cuerpo pudiera hablar ahora mismo, ¿qué diría?",
     options: [
-      { value: "simpatica", text: "Se tensa. Mandíbula apretada, hombros subidos, corazón acelerado" },
-      { value: "freeze", text: "Se apaga. Me bloqueo, me quedo sin palabras, me desconecto" },
-      { value: "mixta", text: "A veces explota y otras veces simplemente... no reacciona" },
-    ],
-  },
-  {
-    question: "¿Cómo es tu concentración?",
-    options: [
-      { value: "simpatica", text: "Mi mente va tan rápido que salto de una cosa a otra sin terminar nada" },
-      { value: "freeze", text: "Me siento lento/a, como si hubiera neblina entre mis pensamientos y las acciones" },
-      { value: "mixta", text: "Inconsistente. Hay días que fluyo y días que no puedo ni empezar" },
-    ],
-  },
-  {
-    question: "Al final del día...",
-    options: [
-      { value: "simpatica", text: "Estoy agotado/a pero no puedo desconectarme. Mi cuerpo quiere parar pero mi mente no" },
-      { value: "freeze", text: "Solo quiero desaparecer. No tengo energía ni para una conversación" },
-      { value: "mixta", text: "Nunca sé cómo voy a terminar. Es un misterio hasta que llega la noche" },
-    ],
-  },
-  {
-    question: "Si tu cuerpo pudiera hablar en este momento, ¿qué diría?",
-    options: [
-      { value: "simpatica", text: "No puedo parar aunque quiera" },
-      { value: "freeze", text: "Ya no tengo nada que dar" },
-      { value: "mixta", text: "No sé ni cómo estoy" },
+      { letter: "A", value: "acelerado", text: "\"No puedo parar aunque quiera\"" },
+      { letter: "B", value: "desconectado", text: "\"No tengo energía para nada\"" },
+      { letter: "C", value: "inestable", text: "\"No sé qué me pasa, un día estoy bien y al otro no\"" },
     ],
   },
 ];
@@ -112,9 +86,9 @@ function trackOnce(eventName, payload = {}) {
 
 function scoreQuiz(answers) {
   const scores = {
-    simpatica: 0,
-    freeze: 0,
-    mixta: 0,
+    acelerado: 0,
+    desconectado: 0,
+    inestable: 0,
   };
 
   answers.forEach((value) => {
@@ -123,7 +97,8 @@ function scoreQuiz(answers) {
     }
   });
 
-  return Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  return sorted[0][0];
 }
 
 function renderProgress() {
@@ -159,7 +134,10 @@ function renderQuestion() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "quiz-option";
-    button.textContent = option.text;
+    button.innerHTML = `
+      <span class="quiz-option-letter">${option.letter}</span>
+      <span class="quiz-option-text">${option.text}</span>
+    `;
     button.addEventListener("click", () => {
       quizAnswers[currentQuestionIndex] = option.value;
 
@@ -183,9 +161,6 @@ function startQuiz(source) {
   quizExperience.hidden = false;
   currentQuestionIndex = 0;
   quizAnswers = [];
-  if (quizStatus) {
-    quizStatus.textContent = "Tu quiz está listo.";
-  }
   renderProgress();
   renderQuestion();
   quizExperience.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -193,7 +168,7 @@ function startQuiz(source) {
 }
 
 function resultsPageUrl(type) {
-  const safeType = type || "mixta";
+  const safeType = type || "inestable";
 
   if (window.location.protocol === "file:") {
     return `./thank-you/index.html?tipo=${safeType}`;
@@ -218,7 +193,7 @@ function setupReveal() {
 }
 
 function setupCTAEvents() {
-  document.querySelectorAll(".button, .hero-jump").forEach((node) => {
+  document.querySelectorAll(".button").forEach((node) => {
     node.addEventListener("click", () => {
       trackEvent("CTA Clicked", { label: node.textContent.trim() });
     });
@@ -228,8 +203,7 @@ function setupCTAEvents() {
 openQuizButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    const source = button.id || "quiz-trigger";
-    startQuiz(source);
+    startQuiz(button.id || "quiz-trigger");
   });
 });
 
@@ -242,4 +216,4 @@ quizBack?.addEventListener("click", () => {
 
 setupReveal();
 setupCTAEvents();
-trackOnce("Optin Page Viewed", { page: "quiz-landing" });
+trackOnce("Optin Page Viewed", { page: "quiz-landing-v2" });

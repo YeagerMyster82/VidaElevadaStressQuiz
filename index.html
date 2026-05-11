@@ -6,7 +6,7 @@
     <title>Vida Elevada | Quiz del sistema nervioso</title>
     <meta
       name="description"
-      content="Haz el quiz de 2 minutos y descubre en qué estado está tu sistema nervioso hoy, y qué necesita para recuperar el equilibrio."
+      content="Haz este quiz de 5 preguntas y descubre el patrón que hoy está dominando tu sistema nervioso."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,65 +27,194 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="hero hero-minimal">
-        <nav class="hero-nav">
-          <div class="brand-lockup">
-            <img
-              class="brand-logo"
-              src="assets/logo-white-complete.png"
-              alt="Vida Elevada Centro Quiropráctico"
-            />
-          </div>
-        </nav>
-
-        <section class="hero-copy reveal">
-          <p class="eyebrow">Vida Elevada | La Neuropráctica™</p>
-          <h1>Tu cuerpo está tratando de decirte algo. Ya es hora de escucharlo.</h1>
-          <p class="hero-text">
-            Haz el quiz de 2 minutos y descubre exactamente en qué estado está tu
-            sistema nervioso hoy, y qué necesita para recuperar el equilibrio.
+      <header class="hero hero-reference">
+        <div class="hero-copy reveal">
+          <img
+            class="brand-logo brand-logo-dark"
+            src="assets/logo-black-complete.png"
+            alt="Vida Elevada Centro Quiropráctico"
+          />
+          <p class="eyebrow">Vida Elevada</p>
+          <h1>No todas las personas se regulan igual.</h1>
+          <p class="hero-text hero-text-dark">
+            Aplicar la técnica equivocada para tu sistema nervioso no solo no
+            ayuda, lo empeora. Descubre tu perfil y recibe tu siguiente paso
+            personalizado.
           </p>
-          <p class="brand-mantra">
-            No es estrés. No es que seas dramático. Tu sistema nervioso lleva
-            tiempo mandándote señales que nadie te ha sabido explicar. Esto cambia hoy.
-          </p>
-
-          <a class="button button-primary hero-jump" href="#quiz-experience" id="open-quiz-hero">
-            Descubrir mi estado (gratis)
+          <a class="button button-gold hero-jump" href="#quiz-panel" id="open-quiz-hero">
+            Empieza el quiz
           </a>
-          <p class="hero-credibility">
-            Diseñado por Vida Elevada Quiropráctica con enfoque neurológico
-          </p>
-        </section>
+          <p class="hero-meta">5 preguntas. Menos de 2 minutos. Completamente gratis.</p>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-image-frame">
+            <img
+              class="hero-image"
+              src="assets/reference-hero.png"
+              alt="Mujer con la mano en el pecho en un espacio calmante y luminoso"
+            />
+            <div class="hero-badge">Adivinanza nerviosa</div>
+          </div>
+        </div>
       </header>
 
       <main>
+        <section class="section intro-section reveal">
+          <div class="section-heading section-heading-centered">
+            <p class="eyebrow">Tu cuerpo tiene un patrón</p>
+            <h2>Este quiz lo identifica.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              La mayoría de personas que llegan a Vida Elevada ya intentaron de
+              todo. Respiraciones. Meditaciones. Suplementos. Consejos de
+              “solo relájate”.
+            </p>
+            <p>
+              Nada funciona del todo porque ninguna de esas cosas fue diseñada
+              para tu sistema nervioso específicamente.
+            </p>
+            <p>
+              Este estado determina exactamente qué tipo de reset necesita tu
+              cuerpo para encontrar equilibrio. Este quiz lo identifica en menos
+              de 2 minutos.
+            </p>
+          </div>
+        </section>
+
         <section class="section reveal">
-          <div class="quiz-embed reveal" id="quiz-experience" hidden>
-            <div class="quiz-embed-header">
-              <div>
-                <p class="card-label">Quiz del sistema nervioso</p>
-                <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 8</p>
-              </div>
-              <div class="quiz-progress" id="quiz-progress" aria-hidden="true"></div>
-            </div>
+          <div class="section-heading section-heading-centered">
+            <h2>¿Qué recibes al completar el quiz?</h2>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <div class="benefit-icon">01</div>
+              <h3>Tu perfil de sistema nervioso</h3>
+              <p>
+                Descubre si hoy estás funcionando más desde El Acelerado, El
+                Desconectado o El Inestable.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon">02</div>
+              <h3>Tu protocolo de reset personalizado</h3>
+              <p>
+                Recibes acceso a tu curso guiado de 5 minutos, diseñado para el
+                patrón neurológico que salió en tu resultado.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-icon">03</div>
+              <h3>Una guía simple para seguir</h3>
+              <p>
+                Un siguiente paso claro para usar tu rutina cuando tu sistema
+                nervioso más lo necesite.
+              </p>
+            </article>
+          </div>
+        </section>
 
-            <div class="quiz-stage">
-              <div class="quiz-stage-inner" id="quiz-stage-inner">
-                <h3 class="quiz-question" id="quiz-question"></h3>
-                <div class="quiz-options" id="quiz-options"></div>
-              </div>
-            </div>
+        <section class="section reveal">
+          <div class="section-heading section-heading-centered">
+            <h2>Así de simple.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span>1</span>
+              <h3>Respondes 5 preguntas</h3>
+              <p>Lo que tu cuerpo hace cuando nadie lo está forzando a explicarse.</p>
+            </article>
+            <article class="step-card">
+              <span>2</span>
+              <h3>Descubres tu perfil</h3>
+              <p>Identificas el patrón que hoy está pidiendo atención.</p>
+            </article>
+            <article class="step-card">
+              <span>3</span>
+              <h3>Recibes acceso al protocolo</h3>
+              <p>Dejas tu nombre y email y Captivation Hub te entrega el curso.</p>
+            </article>
+          </div>
+        </section>
 
-            <div class="quiz-nav">
-              <button class="button button-secondary" type="button" id="quiz-back">Atrás</button>
+        <section class="section reveal">
+          <div class="section-heading section-heading-centered">
+            <h2>Lo que dicen quienes ya lo hicieron.</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>
+                “Este quiz me ayudó a entender por qué nada me funcionaba. Por
+                fin tengo un plan que sí se siente alineado con mi cuerpo.”
+              </p>
+              <strong>María G.</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “En menos de 2 minutos supe lo que necesitaba escuchar. La rutina
+                fue precisa y fácil de hacer.”
+              </p>
+              <strong>Diego R.</strong>
+            </article>
+            <article class="testimonial-card">
+              <p>
+                “No me sentí juzgada ni confundida. Solo sentí que alguien
+                finalmente entendió lo que me pasa.”
+              </p>
+              <strong>Valeria S.</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="section cta-band reveal">
+          <div class="section-heading section-heading-centered">
+            <h2>Tu sistema nervioso lleva tiempo pidiendo tu atención.</h2>
+          </div>
+          <p class="cta-band-copy">
+            Este quiz es el primer paso para entender qué necesita realmente.
+          </p>
+          <button class="button button-gold" type="button" id="open-quiz-inline">
+            Empieza el quiz ahora
+          </button>
+          <p class="hero-meta">5 preguntas. Menos de 2 minutos. Completamente gratis.</p>
+        </section>
+
+        <section class="section reveal" id="quiz-panel">
+          <div class="quiz-shell" id="quiz-experience" hidden>
+            <div class="quiz-frame">
+              <div class="quiz-embed-header">
+                <div>
+                  <p class="card-label">Quiz del sistema nervioso</p>
+                  <p class="quiz-counter" id="quiz-counter">Pregunta 1 de 5</p>
+                </div>
+                <div class="quiz-progress" id="quiz-progress" aria-hidden="true"></div>
+              </div>
+
+              <div class="quiz-stage">
+                <div class="quiz-stage-inner" id="quiz-stage-inner">
+                  <h3 class="quiz-question" id="quiz-question"></h3>
+                  <div class="quiz-options" id="quiz-options"></div>
+                </div>
+              </div>
+
+              <div class="quiz-nav">
+                <button class="button button-secondary" type="button" id="quiz-back">Atrás</button>
+              </div>
             </div>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>© Vida Elevada Quiropráctica</p>
+        <div class="footer-brand">
+          <img
+            class="brand-logo brand-logo-footer"
+            src="assets/logo-white-complete.png"
+            alt="Vida Elevada Centro Quiropráctico"
+          />
+          <p>© Vida Elevada Centro Quiropráctico</p>
+        </div>
         <div class="footer-links">
           <a href="#">Política de privacidad</a>
           <a href="#">Términos</a>

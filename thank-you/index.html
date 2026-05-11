@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vida Elevada | Tu rutina está lista</title>
+    <title>Vida Elevada | Tu resultado</title>
     <meta
       name="description"
-      content="Accede a tu rutina de 5 minutos para resetear tu sistema nervioso, basada en tu resultado."
+      content="Descubre tu perfil del sistema nervioso y solicita acceso a tu protocolo guiado."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,191 +22,131 @@
         };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="icon" type="image/png" href="../assets/favicon-gold.png" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <div class="top-banner" role="status">
-      <p>
-        LIMITED TIME OFFER: Quiz de 8 preguntas + rutina guiada de 5 minutos para
-        calmar tu sistema nervioso (según tu resultado).
-      </p>
-    </div>
-
     <div class="page-shell">
-      <header class="hero hero-optin">
-        <div class="confirmation-panel reveal">
-          <section class="confirmation-copy">
-            <p class="eyebrow">Vida Elevada | La Neuropráctica™</p>
-            <h1>¡Listo! Tu rutina está preparada</h1>
-            <p class="hero-text">
-              Ya tienes acceso a tu rutina de 5 minutos para resetear tu sistema
-              nervioso, basada en tus resultados del quiz.
-            </p>
-            <p class="hero-note">
-              En solo 5 minutos, vas a darle a tu cuerpo una señal de seguridad
-              para bajar el ruido interno y recuperar claridad.
-            </p>
-            <div class="delivery-chip-row">
-              <span class="delivery-chip">5 minutos</span>
-              <span class="delivery-chip">Basado en tu puntuación</span>
-              <span class="delivery-chip">En español</span>
-            </div>
-          </section>
+      <main class="result-page">
+        <section class="result-hero-card reveal">
+          <div class="result-topbar">
+            <img
+              class="brand-logo brand-logo-dark"
+              src="../assets/logo-black-complete.png"
+              alt="Vida Elevada Centro Quiropráctico"
+            />
+            <p class="result-topbar-note">No adivinamos. Medimos.</p>
+          </div>
 
-          <section class="hero-visual" aria-label="Vista de entrega">
-            <div class="visual-scene">
-              <div class="leaf leaf-one"></div>
-              <div class="leaf leaf-two"></div>
-              <div class="bundle-card bundle-card-large">
-                <p class="card-label">Tu acceso</p>
-                <h2 id="hero-routine-title">Rutina de 5 minutos: regular una respuesta mixta (sube y baja)</h2>
-                <p id="hero-routine-intro">
-                  Objetivo: ayudar a tu sistema a sentir seguridad y volver a un ritmo más estable.
+          <div class="result-hero-grid">
+            <div class="result-copy-column">
+              <p class="eyebrow">Tu resultado</p>
+              <h1 id="result-title">El Inestable</h1>
+              <div class="result-state-banner" id="result-state-banner">
+                <span class="result-state-icon" id="result-state-icon">~</span>
+                <span id="result-state-line">Tu sistema nervioso está en modo de vaivén.</span>
+              </div>
+
+              <div class="result-body-copy">
+                <p id="result-paragraph-1">
+                  Un día puedes con todo y al siguiente no sabes de dónde sacar energía.
+                </p>
+                <p id="result-paragraph-2">
+                  Tu sistema nervioso no está encontrando una base estable, por eso se mueve entre intensidad y desconexión.
+                </p>
+                <p id="result-paragraph-3">
+                  Cuando esto pasa, el problema no es falta de ganas. El problema es que tu cuerpo no sabe cuál es el estado seguro al que regresar.
+                </p>
+                <p id="result-paragraph-4">
+                  Tu siguiente paso es recibir una rutina breve que le dé a tu sistema una referencia clara para empezar a organizarse.
                 </p>
               </div>
-              <div class="seal">Hecho por Vida Elevada Quiropráctica para acompañarte hoy, sin abrumarte</div>
+
+              <div class="result-divider">
+                <span></span>
+                <em>♡</em>
+                <span></span>
+              </div>
+
+              <div class="result-reassurance">
+                <h2 id="result-reassurance-title">No estás fallando. Tu cuerpo está intentando adaptarse.</h2>
+                <p id="result-reassurance-copy">
+                  Hay una manera más específica de ayudar a tu sistema nervioso a encontrar su punto de equilibrio.
+                </p>
+              </div>
             </div>
+
+            <div class="result-visual-column">
+              <div class="result-portrait-frame">
+                <div class="result-portrait-layer result-portrait-main" id="result-portrait-main"></div>
+                <div class="result-portrait-layer result-portrait-secondary" id="result-portrait-secondary" hidden></div>
+                <div class="result-mode-badge" id="result-mode-badge">
+                  <span class="result-mode-icon" id="result-mode-icon">~</span>
+                  <strong id="result-mode-text">Modo vaivén</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="result-symptoms">
+            <div class="result-divider result-divider-centered">
+              <span></span>
+              <em>Este modo se ve así:</em>
+              <span></span>
+            </div>
+            <div class="symptom-grid" id="symptom-grid"></div>
           </section>
-        </div>
-      </header>
 
-      <main class="thank-you-layout">
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Acceso inmediato</p>
-            <h2 id="routine-title">Rutina de 5 minutos: regular una respuesta mixta (sube y baja)</h2>
-          </div>
-          <p class="resource-intent" id="routine-intent">
-            Objetivo: ayudar a tu sistema a sentir seguridad y volver a un ritmo más estable.
-          </p>
-          <p class="soft-copy" id="routine-neutral-note">
-            Si no vemos tu resultado aquí, te mostramos primero la rutina mixta como punto de partida suave.
-          </p>
-
-          <div class="resource-grid">
-            <article class="resource-card">
-              <p class="card-label">Mira esto primero (5:00)</p>
-              <div class="video-placeholder">
+          <section class="protocol-card">
+            <div class="protocol-copy">
+              <div class="protocol-title-wrap">
+                <div class="protocol-gift">⌘</div>
                 <div>
-                  <strong>Video de la rutina</strong>
-                  <span>Placeholder de video premium listo para tu embed</span>
+                  <h3 id="protocol-title">Tu próximo paso: tu protocolo de reset personalizado</h3>
+                  <p id="protocol-copy">
+                    Con tu resultado, creamos un plan diseñado específicamente para ti y tu sistema nervioso.
+                  </p>
                 </div>
               </div>
-              <div class="resource-actions">
-                <a class="button button-primary" id="video-link" href="#">Reproducir rutina</a>
-              </div>
-            </article>
-
-            <article class="resource-card">
-              <p class="card-label">¿Prefieres solo audio?</p>
-              <div class="audio-placeholder">
-                <div>
-                  <strong>Versión en audio</strong>
-                  <span>Placeholder para audio player o archivo descargable</span>
-                </div>
-              </div>
-              <div class="resource-actions">
-                <a class="button button-secondary" id="audio-link" href="#">Escuchar audio</a>
-                <a class="small-link" id="download-link" href="#">Descargar audio</a>
-              </div>
-              <div class="resource-note-list">
-                <p>Hazlo sentado/a o de pie, sin dolor.</p>
-                <p>Si te mareas, baja la intensidad y vuelve a tu respiración.</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="segmented-wrap" id="selector-wrap">
-            <p class="card-label">Cambiar rutina</p>
-            <div class="segmented-control" role="tablist" aria-label="Selecciona tu rutina">
-              <button class="segment-button" data-type="simpatica" type="button">Simpática</button>
-              <button class="segment-button" data-type="freeze" type="button">Freeze</button>
-              <button class="segment-button" data-type="mixta" type="button">Mixta</button>
+              <ul class="protocol-list" id="protocol-list">
+                <li>Curso gratuito (4-5 videos)</li>
+                <li>Técnicas específicas para tu perfil</li>
+                <li>Guía descargable</li>
+                <li>Acceso inmediato</li>
+              </ul>
             </div>
-          </div>
-        </section>
 
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Consumo guiado</p>
-            <h2>Cómo usar este recurso</h2>
-          </div>
-          <div class="steps">
-            <article class="step-card">
-              <span>01</span>
-              <h3>Reproduce la rutina ahora (5 minutos).</h3>
-              <p>Empieza hoy, aunque solo tengas una pequeña ventana.</p>
-            </article>
-            <article class="step-card">
-              <span>02</span>
-              <h3>Al terminar, nota 1 cambio pequeño.</h3>
-              <p>Observa respiración, mandíbula, hombros o mente.</p>
-            </article>
-            <article class="step-card">
-              <span>03</span>
-              <h3>Guárdala y repítela 1 vez al día por 7 días.</h3>
-              <p>La consistencia entrena seguridad más que la intensidad.</p>
-            </article>
-          </div>
-        </section>
+            <form id="lead-form" class="protocol-form" action="/api/lead" method="post" novalidate>
+              <input type="hidden" name="quiz_optin" value="true" />
+              <input type="hidden" name="quiz_result" id="quiz-result-field" value="inestable" />
 
-        <section class="section reveal">
-          <div class="quick-win-card">
-            <p class="eyebrow">Quick win</p>
-            <h3>La forma más rápida de sentir el cambio hoy</h3>
-            <p class="quick-win">
-              Haz la rutina una vez antes de revisar el móvil o entrar a una
-              conversación difícil. Tu sistema nervioso regula mejor cuando recibe
-              una señal de seguridad primero.
-            </p>
-          </div>
-        </section>
+              <div class="protocol-form-copy">
+                <p class="card-label">Acceso al curso</p>
+                <h3>Cuéntanos tu nombre y dónde mandarte tu mini curso del reset del sistema nervioso.</h3>
+              </div>
 
-        <section class="section reveal">
-          <div class="section-heading">
-            <p class="eyebrow">Siguiente paso opcional</p>
-            <h2>Si quieres ir más allá del alivio temporal</h2>
-          </div>
-          <div class="resource-card">
-            <p class="soft-copy">
-              Estas rutinas son una excelente señal rápida para tu sistema. En
-              Vida Elevada nos enfocamos en quiropráctica neurológicamente basada
-              para ayudar a que tu sistema nervioso se reorganice y sostenga
-              equilibrio con el tiempo. Si te interesa, puedes explorar el
-              siguiente paso con calma.
-            </p>
-            <div class="resource-actions">
-              <a class="button button-primary" href="#">Explorar evaluación inicial</a>
-              <a class="button button-secondary" href="#">Conocer nuestro enfoque</a>
-            </div>
-            <p class="privacy-note">Sin compromiso. Te explicamos si eres buen/a candidato/a.</p>
-          </div>
-        </section>
+              <label for="name">Tu nombre</label>
+              <input id="name" name="name" type="text" autocomplete="given-name" required />
+              <p class="field-error" id="name-error" aria-live="polite"></p>
 
-        <section class="section reveal">
-          <div class="support-band">
-            <div class="support-card">
-              <p>
-                Si también te lo enviamos por email, revisa tu bandeja de entrada
-                (y Promociones/Spam) en los próximos minutos.
-              </p>
-            </div>
-            <div class="support-card">
-              <p>Guarda esta página para volver a tu rutina cuando lo necesites.</p>
-              <a class="small-link" href="#">Soporte</a>
-              <p class="support-note">¿Problemas para reproducir? Escríbenos y te ayudamos.</p>
-            </div>
-          </div>
+              <label for="email">Tu mejor correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <p class="field-error" id="email-error" aria-live="polite"></p>
+
+              <button class="button button-gold button-full" type="submit" id="submit-button">
+                Enviarme mi protocolo
+              </button>
+              <p class="privacy-note">Te lo enviaremos al instante y luego te llevaremos a la siguiente página.</p>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <section class="result-bottom-bar">
+            <strong>Entender es el primer paso.</strong>
+            <span>Regular tu sistema nervioso es el siguiente.</span>
+          </section>
         </section>
       </main>
-
-      <footer class="site-footer">
-        <p>© Vida Elevada Quiropráctica</p>
-        <div class="footer-links">
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos</a>
-        </div>
-      </footer>
     </div>
 
     <script src="script.js"></script>
