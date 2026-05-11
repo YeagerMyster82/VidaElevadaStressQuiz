@@ -189,6 +189,11 @@ body::before {
   align-items: center;
 }
 
+.hero-scene-card {
+  display: grid;
+  gap: 18px;
+}
+
 .hero-image-frame,
 .result-image-frame {
   position: relative;
@@ -197,6 +202,43 @@ body::before {
   border-radius: 28px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(243, 234, 223, 0.84));
   box-shadow: var(--shadow-md);
+}
+
+.hero-image-frame-clean {
+  min-height: 540px;
+}
+
+.hero-summary-card {
+  position: relative;
+  padding: 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(47, 71, 56, 0.08);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-summary-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(90deg, rgba(207, 168, 111, 0.9), rgba(108, 125, 106, 0.5));
+}
+
+.hero-summary-card h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--text);
+}
+
+.hero-summary-card p:last-child {
+  margin: 10px 0 0;
+  color: var(--text-soft);
+  line-height: 1.65;
 }
 
 .hero-image {
@@ -1174,6 +1216,10 @@ input {
     min-height: 560px;
   }
 
+  .hero-image-frame-clean {
+    min-height: 420px;
+  }
+
   .oto-video-frame {
     min-height: 300px;
   }
@@ -1216,6 +1262,10 @@ input {
 
   .hero-image-frame,
   .result-image-frame {
+    min-height: 320px;
+  }
+
+  .hero-image-frame-clean {
     min-height: 320px;
   }
 
