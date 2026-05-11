@@ -208,6 +208,98 @@ body::before {
   min-height: 540px;
 }
 
+.hero-placeholder-art {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.8), transparent 22%),
+    linear-gradient(180deg, #f7efe3 0%, #efe1cf 100%);
+}
+
+.hero-orb,
+.hero-leaf,
+.hero-silhouette-line {
+  position: absolute;
+  display: block;
+}
+
+.hero-orb {
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(207, 168, 111, 0.28), rgba(207, 168, 111, 0));
+}
+
+.hero-orb-a {
+  width: 220px;
+  height: 220px;
+  right: 8%;
+  top: 8%;
+}
+
+.hero-orb-b {
+  width: 180px;
+  height: 180px;
+  left: 10%;
+  bottom: 10%;
+}
+
+.hero-leaf {
+  width: 110px;
+  height: 180px;
+  border-radius: 100px 100px 30px 30px;
+  background: linear-gradient(180deg, rgba(108, 125, 106, 0.22), rgba(108, 125, 106, 0.05));
+}
+
+.hero-leaf-a {
+  right: 10%;
+  top: 14%;
+  transform: rotate(-12deg);
+}
+
+.hero-leaf-b {
+  left: 6%;
+  bottom: 10%;
+  transform: rotate(14deg);
+}
+
+.hero-silhouette-card {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 14%;
+  top: 18%;
+  border-radius: 48px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.12)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.hero-silhouette-line {
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(47, 71, 56, 0.12);
+}
+
+.hero-silhouette-line-a {
+  top: 16%;
+  width: 92px;
+  height: 92px;
+}
+
+.hero-silhouette-line-b {
+  top: 33%;
+  width: 140px;
+  height: 170px;
+  border-radius: 90px 90px 60px 60px;
+}
+
+.hero-silhouette-line-c {
+  bottom: 14%;
+  width: 180px;
+  height: 24px;
+}
+
 .hero-summary-card {
   position: relative;
   padding: 22px;
@@ -693,14 +785,56 @@ a:focus-visible {
 .result-portrait-layer {
   position: absolute;
   inset: 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, rgba(246, 238, 225, 0.96), rgba(232, 220, 202, 0.96));
 }
 
 .result-portrait-secondary {
   inset: 0 0 0 54%;
-  filter: saturate(0.75) brightness(0.82);
+  filter: brightness(0.94);
+}
+
+.result-placeholder-mark {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: 210px;
+  height: 210px;
+}
+
+.result-placeholder-ring,
+.result-placeholder-wave {
+  position: absolute;
+  display: block;
+}
+
+.result-placeholder-ring {
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(47, 71, 56, 0.16);
+}
+
+.result-placeholder-wave {
+  left: 18%;
+  right: 18%;
+  top: 42%;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(47, 71, 56, 0.12);
+}
+
+.result-placeholder-wave-2 {
+  top: 56%;
+  left: 28%;
+  right: 28%;
+}
+
+.result-placeholder-mark-secondary {
+  width: 140px;
+  height: 140px;
+  top: 38%;
 }
 
 .result-mode-badge {
@@ -902,6 +1036,81 @@ a:focus-visible {
   position: relative;
   min-height: 380px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(244, 236, 224, 0.92));
+}
+
+.oto-video-placeholder {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.4), transparent 20%),
+    linear-gradient(180deg, #d8bea1 0%, #b78d63 100%);
+}
+
+.oto-video-glow,
+.oto-video-leaf,
+.oto-video-panel {
+  position: absolute;
+  display: block;
+}
+
+.oto-video-glow {
+  width: 240px;
+  height: 240px;
+  right: 10%;
+  top: 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0));
+}
+
+.oto-video-leaf {
+  width: 110px;
+  height: 180px;
+  border-radius: 100px 100px 36px 36px;
+  background: linear-gradient(180deg, rgba(47, 71, 56, 0.26), rgba(47, 71, 56, 0.06));
+}
+
+.oto-video-leaf-a {
+  left: 12%;
+  bottom: 12%;
+  transform: rotate(10deg);
+}
+
+.oto-video-leaf-b {
+  right: 12%;
+  bottom: 14%;
+  transform: rotate(-12deg);
+}
+
+.oto-video-panel {
+  left: 50%;
+  top: 50%;
+  width: 56%;
+  height: 56%;
+  transform: translate(-50%, -50%);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.oto-video-panel span {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.oto-video-panel span:nth-child(1) {
+  top: 24%;
+}
+
+.oto-video-panel span:nth-child(2) {
+  top: 44%;
+}
+
+.oto-video-panel span:nth-child(3) {
+  top: 64%;
 }
 
 .oto-play-button {

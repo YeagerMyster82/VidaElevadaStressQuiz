@@ -40,8 +40,7 @@ const resultProfiles = {
     reassuranceCopy: "Es tu sistema nervioso atascado en un estado de activación que no sabe cómo apagar.",
     modeText: "Modo alerta",
     modeIcon: "⚡",
-    mainImage: "../assets/result-acelerado-ref.png",
-    secondaryImage: "",
+    hasSecondary: false,
     symptoms: [
       { icon: "◎", label: "Mente acelerada y pensamientos repetitivos." },
       { icon: "☾", label: "Dificultad para dormir o descanso poco reparador." },
@@ -73,8 +72,7 @@ const resultProfiles = {
     reassuranceCopy: "Y hay una forma muy específica de despertar tu sistema nervioso sin forzarlo, sin agotarte más en el intento.",
     modeText: "Modo conservación",
     modeIcon: "▣",
-    mainImage: "../assets/result-desconectado-ref.png",
-    secondaryImage: "",
+    hasSecondary: false,
     symptoms: [
       { icon: "◌", label: "Mente nublada y dificultad para concentrarte." },
       { icon: "▣", label: "Cansancio que no mejora, ni descansando." },
@@ -106,8 +104,7 @@ const resultProfiles = {
     reassuranceCopy: "Necesitas que tu sistema nervioso encuentre un punto de equilibrio desde el que pueda operar sin colapsar.",
     modeText: "Modo vaivén",
     modeIcon: "~",
-    mainImage: "../assets/reference-hero.png",
-    secondaryImage: "../assets/result-inestable-ref.png",
+    hasSecondary: true,
     symptoms: [
       { icon: "↕", label: "Cambios bruscos de ánimo, energía y motivación." },
       { icon: "◌", label: "Pensamientos acelerados seguidos de mente en blanco." },
@@ -232,14 +229,14 @@ function applyResult(type) {
   quizResultField.value = profile.slug;
 
   resultModeBadge.dataset.profile = profile.slug;
-  resultPortraitMain.style.backgroundImage = `url("${profile.mainImage}")`;
+  resultPortraitMain.dataset.profile = profile.slug;
 
-  if (profile.secondaryImage) {
+  if (profile.hasSecondary) {
     resultPortraitSecondary.hidden = false;
-    resultPortraitSecondary.style.backgroundImage = `url("${profile.secondaryImage}")`;
+    resultPortraitSecondary.dataset.profile = profile.slug;
   } else {
     resultPortraitSecondary.hidden = true;
-    resultPortraitSecondary.style.backgroundImage = "";
+    resultPortraitSecondary.dataset.profile = "";
   }
 
   renderSymptoms(profile.symptoms);
